@@ -6,7 +6,7 @@ var arrayScout = ["Scout", "6243", "74750", 5];
 function programStart(){
 	var employees = [arrayAtticus,arrayJem,arrayBoo,arrayScout]; //creates an array of arrays to automate the sti calculation
 	for(var i = 0; i<employees.length; i++){ //loops through employees and console logs the call to create the new array for each employee
-		console.log(createNewArray(employees[i]));
+		console.log(createNewArray(employees[i]).join(", "));
 	}
 }
 
@@ -68,6 +68,7 @@ function calcSTI (empNum, annIncome, empRating){ //function calculates bonus per
 function calcTotalBonus (sti, annIncome){ //function takes in two inputs, sti percent and annual income, and ouputs the total bonus by multiplying these values
 	return Math.round(sti*annIncome);
 }
+
 
 programStart();
 // console.log(createNewArray(arrayAtticus));
