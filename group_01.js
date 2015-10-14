@@ -3,6 +3,12 @@ var arrayJem = ["Jem", "62347", "63500", 4];
 var arrayBoo = ["Boo", "11435", "54000", 3];
 var arrayScout = ["Scout", "6243", "74750", 5];
 
+function programStart(){
+	var employees = [arrayAtticus,arrayJem,arrayBoo,arrayScout]; //creates an array of arrays to automate the sti calculation
+	for(var i = 0; i<employees.length; i++){ //loops through employees and console logs the call to create the new array for each employee
+		console.log(createNewArray(employees[i]));
+	}
+}
 
 function createNewArray(inputArray){
 	var name = inputArray[0];
@@ -63,7 +69,8 @@ function calcTotalBonus (sti, annIncome){ //function takes in two inputs, sti pe
 	return Math.round(sti*annIncome);
 }
 
-console.log(createNewArray(arrayAtticus));
-console.log(createNewArray(arrayJem));
-console.log(createNewArray(arrayBoo));
-console.log(createNewArray(arrayScout));
+programStart();
+// console.log(createNewArray(arrayAtticus));
+// console.log(createNewArray(arrayJem));
+// console.log(createNewArray(arrayBoo));
+// console.log(createNewArray(arrayScout));
